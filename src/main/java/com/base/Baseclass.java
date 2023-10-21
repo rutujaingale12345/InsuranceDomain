@@ -8,10 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Baseclass {
+	FileInputStream fileInputStream;
 	public WebDriver driver;
 
 	public void LaunchTheWeb() throws IOException{
-		FileInputStream fileInputStream = new FileInputStream(".\\src\\main\\resources\\property");
+		 fileInputStream = new FileInputStream(".\\src\\main\\resources\\property");
 		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
